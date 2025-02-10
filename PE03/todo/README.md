@@ -1,70 +1,26 @@
-# Getting Started with Create React App
+# Input
+We are building a react web app using Javascript, HTML and CSS. We use npm as a package manager to import node which runs a web server.
+I used the Material UI framework to add things like Boxes, buttons, inputs (https://mui.com/material-ui/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The input files to the webpage were
+- app.js (starting point)
+  - This is the starting point of the application containing the root division
+- List.jsx (list component)
+  - This is the main list that we want to display.
+- ListItem.css (list item component)
+  - This is the individual list item that we are displaying. this contains a delete button.   
 
-## Available Scripts
 
-In the project directory, you can run:
+# Process
+- We used npm to compile and run the web servier. The command used is:
+  - npm start
 
-### `npm start`
+This created a client folder which had the compiled code.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+How the list works:
+1. The List component has a state variable called tasks. This is an array of strings. Each item is the task description. Depending on the number of items in tasks, the number of boxes is displayed.
+2. The input field ("Enter task description") populates another state variable called "description". When the "Add task" button is clicked, the current description is added to the end of the tasks array. This adds a task to the task list.
+3. When the delete button on the ListItem is clicked, the corresponding task at the that index is deleted. This updates the task list and the new list is displayed.
+  
+# Output
+The output is as seen in the word doc. It displays the content of the to do list with the buttons to add and delete each task.
