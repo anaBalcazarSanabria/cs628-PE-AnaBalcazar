@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const AddCity = ({cities, setCities}) => {
+const AddCity = ({cities}) => {
     const [name, setName] = useState();
     const [country, setCountry] = useState();
     const [population, setPopulation] = useState();
@@ -14,13 +15,19 @@ const AddCity = ({cities, setCities}) => {
     const changePopulation = (e) => {
         setPopulation(e.target.value);
     }
+    let navigate = useNavigate();
     
+    function redirectToHome() {
+        navigate('/');
+    }
+
     const addCity = () => {
         cities.push({
             name: name,
             country: country,
             population: population
         });
+        redirectToHome();
     }
 
     return (
