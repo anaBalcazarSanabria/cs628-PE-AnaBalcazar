@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+# Input
+This is a react web app using Javascript, HTML and CSS. This app uses npm as a package manager to import node which runs a web server.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The input files to the webpage were
+- app.js (starting point)
+  - This is the starting point of the application containing the root division
+- CitiesList.js (list component)
+  - This is the main list of cities that we want to display.
+- City.js
+  - This is the city detail page  
+- AddCity.js (Add city form component)
+  - This shows a form to fill with city details such as name, population and country.   
 
-## Available Scripts
 
-In the project directory, you can run:
+# Process
+- We used npm to compile and run the web servier. The command used is:
+  - npm start
 
-### `npm start`
+This created a client folder which had the compiled code.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+How the app works:
+1. This app uses the same concepts as the todo list exercise and the hos04 and hos06. the list is similar to the to do list. The form was built using concepts like react input and button as seen in hos04. the routing and navigation are similar to what was learned in hos06.
+2. The parent component (App.js) contains a state variable called cities. This is passed down to the child components which can add or just display the cities.
+3. CitiesList.js simply takes the list of cities and displays it. It is empty in the beginning and so the app shows no cities when it is launched.
+4. AddCity.js uses a form to capture a new city's details as input. Then it adds this new city to the list of cities. This also redirects to the cities list page after the form is submitted.
+5. City.js displays a city's details. It is nested under the cities list page. It uses the useParams hook to get the city id, and then displays the details of that particular city id.
+  
+# Output
+The output is as seen in the word doc. It displays the content of the cities application.
